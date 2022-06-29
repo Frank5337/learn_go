@@ -13,10 +13,11 @@ import (
 )
 
 func main() {
-	s, sep := "", ""
-	for _, arg := range os.Args[1:] {
-		s += sep + arg
-		sep = " "
+	s, sep := "", 1
+	for index, arg := range os.Args[0:] {
+		s += string(rune(sep)) + arg
+		fmt.Println(sep)
+		fmt.Println(index)
 	}
 	fmt.Println(s)
 }
