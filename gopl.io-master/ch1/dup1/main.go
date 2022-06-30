@@ -29,6 +29,7 @@ func main() {
 	//http://stackoverflow.com/questions/11853396/google-go-lang-assignment-order)
 	for line, n := range counts {
 		if n > 1 {
+			//dup1的格式字符串中还含有制表符\t和换行符\n。
 			fmt.Printf("%d\t%s\n", n, line)
 		}
 	}
